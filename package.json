@@ -1,5 +1,6 @@
 {
   "name": "benrilanding-page",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://duycutephomaique.github.io/benri-landing-page",

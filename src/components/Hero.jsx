@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Hero() {
   const images = [
-    "https://external-preview.redd.it/fhD7u-HHroDQQJLJmEkOj0oNXpJJhPlf0ZRW7gRs6eU.png?auto=webp&s=d1b2acfa4751c1f8bfade4f3485fa953b62437ba",
     "https://th.bing.com/th/id/OIP.UH1XHRYHMJWb2zxHn0IxNAHaEV?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    "https://external-preview.redd.it/fhD7u-HHroDQQJLJmEkOj0oNXpJJhPlf0ZRW7gRs6eU.png?auto=webp&s=d1b2acfa4751c1f8bfade4f3485fa953b62437ba",
-   "https://th.bing.com/th/id/OIP.UH1XHRYHMJWb2zxHn0IxNAHaEV?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    "https://img.thuthuat123.com/uploads/2019/06/11/anh-nen-meo-de-thuong_093846627.jpg",
+   "https://th.bing.com/th/id/OIP.UH1XHRYHMJWb2zxHn0IxNAHaEV?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   "https://img.thuthuat123.com/uploads/2019/06/11/anh-nen-meo-de-thuong_093846627.jpg"
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -31,7 +31,8 @@ function Hero() {
           centerMode: false,
         }
       }
-    ]
+    ],
+    
   };
 
   return (
@@ -46,7 +47,7 @@ function Hero() {
           <div className="max-w-[900px] object-center mx-auto mb-16">
             <Slider {...settings}>
               {images.map((src, index) => (
-                <div key={index} className="px-2 object-ce w-[120px] h-[220px]">
+                <div key={index} className="px-2 object-ce ">
                   <img
                     src={src}
                     alt={`Benri App Mockup ${index + 1}`}

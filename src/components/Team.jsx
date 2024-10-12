@@ -37,7 +37,7 @@ function Team() {
 
               <div key={member.name} className="text-center">
               <img
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-benri-green-400"
                 src={member.image}
                 alt={member.name}
                 />

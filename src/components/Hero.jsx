@@ -44,7 +44,7 @@ function Hero() {
           </h1>
           <p className="text-xl mb-8">Tiết kiệm thời gian và tiền bạc mỗi ngày</p>
           
-          <div className="max-w-[900px] object-center mx-auto mb-16">
+          <div className="max-w-[900px] object-center mx-auto mb-16 px-2 md:px-8">
             <Slider {...settings}>
               {images.map((src, index) => (
                 <div key={index} className="px-2 object-ce ">

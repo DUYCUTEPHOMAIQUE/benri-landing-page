@@ -17,7 +17,7 @@ function Header() {
   whileHover={{ scale: 1.10, transition: { duration: 0.3 } }}
   whileTap={{ scale: 0.95 }}
 >
-        <a href="#" className="bg-benri-green-400 text-white px-4 py-2 rounded-full hover:bg-benri-green-500 transition duration-300">Tải ứng dụng</a>
+        <a href="#" className="bg-benri-green-400 text-white px-4 py-2 rounded-full hover:bg-benri-green-500 transition duration-300 inline-flex items-center justify-center">Tải ứng dụng</a>
         </motion.div>
       </div>
     </div>

@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: main
+    branches:
+      - main # Thay 'main' bằng tên nhánh bạn đang sử dụng
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20' 
+        node-version: '20' # Chọn phiên bản Node.js mà bạn sử dụng
 
     - name: Install dependencies
       run: npm install
@@ -24,4 +25,7 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      run: npm run deploy -- --dir=dist # Đường dẫn đến thư mục build, có thể thay đổi tùy thuộc vào cấu hình của bạn
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist # Đường dẫn đến thư mục build, có thể thay đổi tùy thuộc vào cấu hình của bạn

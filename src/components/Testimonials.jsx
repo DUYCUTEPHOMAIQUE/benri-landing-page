@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const testimonials = [
   {
@@ -22,18 +23,22 @@ function Testimonials() {
   return (
     <section className="bg-benri-green-50 py-12 sm:py-16 lg:py-20" id="testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-benri-green-800 sm:text-4xl">
-            Khách hàng nói gì về chúng tôi
-          </h2>
-        </div>
+        <AnimatedSection>
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-benri-green-800 sm:text-4xl">
+              Khách hàng nói gì về chúng tôi
+            </h2>
+          </div>
+        </AnimatedSection>
         <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:gap-x-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-8 border border-benri-green-200">
-              <p className="text-benri-green-600 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
-              <div className="font-medium text-benri-green-800">{testimonial.author}</div>
-              <div className="text-benri-green-500">{testimonial.role}</div>
-            </div>
+            <AnimatedSection key={index}>
+              <div className="bg-white rounded-lg shadow-md p-8 border border-benri-green-200">
+                <p className="text-benri-green-600 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                <div className="font-medium text-benri-green-800">{testimonial.author}</div>
+                <div className="text-benri-green-500">{testimonial.role}</div>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

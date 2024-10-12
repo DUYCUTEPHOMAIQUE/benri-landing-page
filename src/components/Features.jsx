@@ -1,5 +1,8 @@
 import React from 'react';
 import { FaShoppingBasket, FaMoneyBillWave, FaListAlt } from 'react-icons/fa';
+import AnimatedSection from './AnimatedSection';
+import ParallaxSection from './ParallaxSection';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -23,14 +26,26 @@ function Features() {
   return (
     <section id="features" className="py-20 bg-benri-green-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-benri-green-800 mb-12">Tính năng nổi bật</h2>
+        <AnimatedSection>
+          <h2 className="text-3xl font-bold text-center text-benri-green-800 mb-12">Tính năng nổi bật</h2>
+        </AnimatedSection>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-              <div className="text-center mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-center mb-2 text-benri-green-600">{feature.title}</h3>
-              <p className="text-gray-600 text-center">{feature.description}</p>
-            </div>
+            <AnimatedSection key={index}>
+
+            <ParallaxSection >
+              <motion.div
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                  whileTap={{ scale: 0.95 }}
+                  >
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <div className="text-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-center mb-2 text-benri-green-600">{feature.title}</h3>
+                <p className="text-gray-600 text-center">{feature.description}</p>
+              </div>
+                </motion.div>
+            </ParallaxSection>
+                  </AnimatedSection>
           ))}
         </div>
       </div>

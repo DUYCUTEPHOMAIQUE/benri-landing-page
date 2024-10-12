@@ -1,9 +1,11 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
 
 function CallToAction() {
   return (
     <div className="bg-benri-green-400">
       <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <AnimatedSection>
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
           <span className="block">Sẵn sàng để bắt đầu?</span>
           <span className="block">Tải ứng dụng ngay hôm nay.</span>
@@ -17,6 +19,7 @@ function CallToAction() {
         >
           Tải xuống miễn phí
         </a>
+        </AnimatedSection>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const faqs = [
   {
@@ -22,21 +23,28 @@ const faqs = [
 function FAQ() {
   return (
     <div className="bg-benri-green-50" id="faq">
+      
+
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <AnimatedSection>
         <h2 className="text-3xl font-extrabold text-benri-green-800 text-center mb-8">
           Câu hỏi thường gặp
         </h2>
+        </AnimatedSection>
         <dl className="mt-6 space-y-6 divide-y divide-benri-green-200">
           {faqs.map((faq) => (
-            <div key={faq.question} className="pt-6">
+            <AnimatedSection key={faq.question}>
+              <div className="pt-6">
               <dt className="text-lg">
                 <span className="font-medium text-benri-green-600">{faq.question}</span>
               </dt>
               <dd className="mt-2 text-base text-benri-green-500">{faq.answer}</dd>
             </div>
+            </AnimatedSection>
           ))}
         </dl>
       </div>
+         
     </div>
   );
 }

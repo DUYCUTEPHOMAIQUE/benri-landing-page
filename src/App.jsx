@@ -10,11 +10,19 @@ import Achievements from './components/Achievements';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Team from './components/Team';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
   return (
-    <BlurWrapper>
-      <div className="font-sans bg-benri-green-100">
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="font-sans bg-benri-green-100">
         <Header />
         <main>
           <Hero />
@@ -28,7 +36,8 @@ function App() {
         </main>
         <Footer />
       </div>
-    </BlurWrapper>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

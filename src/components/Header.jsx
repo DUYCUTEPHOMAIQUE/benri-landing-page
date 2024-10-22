@@ -6,7 +6,7 @@ function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
   <nav className="container mx-auto px-6 py-3">
     <div className="flex justify-between items-center">
-      <a href="#h" className="text-2xl font-bold text-benri-green-400">Benri Fake</a>
+      <a href="#h" className="text-2xl font-bold text-benri-green-400">Benri</a>
       <div className="flex items-center space-x-4">
         <div className="hidden md:flex items-center space-x-4">
           <a href="#features" className="text-benri-green-800 hover:text-benri-green-400 font-semibold">Tính năng</a>
